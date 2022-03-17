@@ -20,7 +20,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (userExists) {
     res.status(400);
-    throw new error('User already exists. Please use another email address.');
+    throw new Error('User already exists. Please use another email address.');
   }
 
   // Hash password
